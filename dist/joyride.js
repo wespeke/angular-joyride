@@ -327,8 +327,8 @@ var joyrideDirective = function($animate, joyrideService, $compile, $templateReq
               }
 
               // Set joyride position
-              joyrideContainer.style.left = position.left + 'px';
-              joyrideContainer.style.top = position.top + 'px';
+              joyrideContainer.style.left = Math.max(0, position.left) + 'px';
+              joyrideContainer.style.top = Math.max(0, position.top) + 'px';
               joyrideContainer.style.right = 'auto';
               joyrideContainer.style.bottom = 'auto';
               joyrideContainer.style.transform = 'none';
